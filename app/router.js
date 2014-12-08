@@ -7,7 +7,12 @@ var Router = Ember.Router.extend({
 
 // Define routes
 Router.map(function() {
-  this.resource('todos', {path: '/'})
+    this.resource('todos', { path: '/' }, function() {
+        this.route('active');
+        this.route('complete');
+    });
+  this.route('todos/active');
+  this.route('todos/complete');
 });
 
 
