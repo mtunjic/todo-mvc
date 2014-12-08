@@ -1,15 +1,15 @@
 {{input type="text" id="new-todo" placeholder="What needs to be done?" 
-	value=newTitle action="createTodo"}}
-
+    value=newTitle action="createTodo"}}
+ 
 <section id="main">
     {{outlet}}
-    <input type="checkbox" id="toggle-all">
+    {{input type="checkbox" id="toggle-all" checked=allAreDone}}
 </section>
-
+ 
 <footer id="footer">
     <span id="todo-count">
-		<strong>{{remaining}}</strong> {{inflection}} left
-	</span> 
+        <strong>{{remaining}}</strong> {{inflection}} left
+    </span>
     <ul id="filters">
         <li>
             {{#link-to "todos.index" activeClass="selected"}}All{{/link-to}}
@@ -22,8 +22,9 @@
         </li>
     </ul>
  
-   {{#if hasCompleted}}
-		<button id="clear-completed" {{action "clearCompleted"}}>
-		Clear completed ({{completed}})</button>
-   {{/if}} 
+    {{#if hasCompleted}}
+        <button id="clear-completed" {{action "clearCompleted"}}>
+            Clear completed ({{completed}})
+        </button>
+    {{/if}}
 </footer>
