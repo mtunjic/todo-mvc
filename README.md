@@ -1,5 +1,5 @@
 
-# Todo-mvc
+# Ember.js Todo (mvc) demo 
 
 
 ## Prerequisites
