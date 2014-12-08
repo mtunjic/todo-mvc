@@ -5,15 +5,12 @@ var Router = Ember.Router.extend({
   location: config.locationType
 });
 
-
-
+// Define routes
 Router.map(function() {
   this.resource('todos', {path: '/'})
-
-  // this.resource("post", { path: "/posts/:post_id" }, function() {
-  //   this.resource("comments", { path: "/comments" });
-  // });
 });
 
 
+
+// to avoid use of globals
 export default Router;
